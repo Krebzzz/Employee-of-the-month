@@ -58,8 +58,7 @@ void moyenne_notes(float *mark1, float *mark2, float *mark3, float *mark4, Emplo
     int somme,moyenne;
      somme = *mark1 + *mark2 + *mark3 + *mark4;
      moyenne = somme / 4;
-     printf("\n%s a une moyenne de > ",e->name);
-     printf("%d",moyenne);
+     return moyenne;
      
      
 }
@@ -105,8 +104,7 @@ void boucle_principal(){
         
     //Affichage moyenne 
     for ( i = 0; i < nbEmployees ; i++)
-         
-         moyenne_notes(&tab[i].mark1,&tab[i].mark2,&tab[i].mark3,&tab[i].mark4, &tab[i]);
+         printf("%s a une moyenne de > %d", tab[i].name, moyenne_notes(&tab[i].mark1,&tab[i].mark2,&tab[i].mark3,&tab[i].mark4, &tab[i]));
          
     free(tab);
 }
